@@ -2,23 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstaculo : MonoBehaviour {
+public class Obstaculos2 : MonoBehaviour
+{
 
     [SerializeField]
-    private float velocidade = 0.6f;
-    [SerializeField]
-    private float variacaoDaPosicaoY;
+    private float tempoParaGerar = 3;
+    private float cronometro;
 
+    [SerializeField]
+    private GameObject modeloObstaculo;
+
+    // Update is called once per frame
 
     private void Awake()
     {
-        this.transform.Translate(Vector3.up * 2);
-
+        this.cronometro = this.tempoParaGerar;
     }
-    // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.left * 2);
-        
+        this.cronometro -= Time.deltaTime;
+        if (this.cronometro < 0)
+        {
+            GameObject.Instantiate(this.modeloObstaculo, this.transform.position, Quaternion.identity);
+            this.cronometro = this.tempoParaGerar;
+        }
     }
+
 }
