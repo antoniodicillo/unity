@@ -11,6 +11,9 @@ public class GeradorDeObstaculos : MonoBehaviour
     [SerializeField]
     //variável do tipo GameObjetct para receber um prefab
     private GameObject modeloObstaculo;
+    //segunda variável do tipo GameObjetct para receber um prefab
+    [SerializeField]
+    private GameObject modeloObstaculo2;
     //variável para eu saber quanto tempo já passou para que eu saiba se já é hora
     //de criar outro obstáculo
     private float cronometro;
@@ -30,9 +33,19 @@ public class GeradorDeObstaculos : MonoBehaviour
         //Quando o cronometro chegar em zero,
         if (this.cronometro < 0)
         {
+            int rng = Random.Range(1, 3);
             //Instancia um novo objeto, aceitando quando parâmetro, qual objeto, onde instanciar e
             //se eu quero usar a rotação
-            GameObject.Instantiate(this.modeloObstaculo, this.transform.position, Quaternion.identity);
+            print(this.transform.position);
+            if (rng == 1)
+            {
+                GameObject.Instantiate(this.modeloObstaculo, this.transform.position + Vector3.right * 5f, Quaternion.identity);
+            }
+            else
+            {
+                GameObject.Instantiate(this.modeloObstaculo2, this.transform.position + Vector3.right * 5f, Quaternion.identity);
+            };
+            
             //Quando o cronometro chega em zero, volta para o tempo inicial e reinicia a contagem  
             this.cronometro = this.tempoParaGerar;
         }
