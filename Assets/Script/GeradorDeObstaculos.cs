@@ -36,7 +36,6 @@ public class GeradorDeObstaculos : MonoBehaviour
             int rng = Random.Range(1, 3);
             //Instancia um novo objeto, aceitando quando parâmetro, qual objeto, onde instanciar e
             //se eu quero usar a rotação
-            print(this.transform.position);
             if (rng == 1)
             {
                 GameObject.Instantiate(this.modeloObstaculo, this.transform.position + Vector3.right * 5f, Quaternion.identity);
@@ -45,10 +44,9 @@ public class GeradorDeObstaculos : MonoBehaviour
             {
                 GameObject.Instantiate(this.modeloObstaculo2, this.transform.position + Vector3.right * 5f, Quaternion.identity);
             };
-            
+
             //Quando o cronometro chega em zero, volta para o tempo inicial e reinicia a contagem  
             this.cronometro = this.tempoParaGerar;
         }
-
     }
 }

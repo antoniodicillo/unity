@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
@@ -17,7 +18,6 @@ public class Obstaculo : MonoBehaviour
     private void Update()
     {
         this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
-
     }
 
     private void OnTriggerEnter2D(Collider2D outro)

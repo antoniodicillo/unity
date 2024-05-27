@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Diretor : MonoBehaviour
 {
+
+    
+    public int pontos;
     [SerializeField]
     private GameObject imagemGameOver;
     private Passaro passaro;

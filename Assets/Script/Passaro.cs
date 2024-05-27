@@ -45,8 +45,22 @@ public class Passaro : MonoBehaviour
         this.fisica.simulated = true;
     }
 
+    private void OnTriggerEnter(Collider colisao)
+    {
+        print(colisao.gameObject.name);
+        if (colisao.gameObject.name == "Ponto")
+        {
+            this.diretor.pontos += 1;
+            print(this.diretor.pontos);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D colisao)
     {
+        if(colisao.gameObject.name == "Ponto")
+        {
+            return;
+        }
         this.fisica.simulated = false;
         this.diretor.FinalizarJogo();
     }
