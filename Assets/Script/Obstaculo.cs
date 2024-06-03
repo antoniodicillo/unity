@@ -15,13 +15,15 @@ public class Obstaculo : MonoBehaviour
         this.transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
     }
 
-    private void Update()
+    void Update()
     {
+        Debug.Log("nah id b");
         this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D outro)
+    private void OnTriggerEnter2D(Collider2D colisao)
     {
+        Debug.Log("nah id destroy");
         this.Destruir();
     }
 
@@ -30,3 +32,4 @@ public class Obstaculo : MonoBehaviour
         Destroy(this.gameObject);
     }
 }
+

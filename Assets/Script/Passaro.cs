@@ -26,7 +26,7 @@ public class Passaro : MonoBehaviour
 
     void Update()
     {
-
+        
         if (Input.GetMouseButtonDown(0))
         {
             this.Impulsionar();

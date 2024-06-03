@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class chao : MonoBehaviour
+public class Chao : MonoBehaviour
 {
     [SerializeField]
     private float velocidade = 0.6f;
