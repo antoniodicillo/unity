@@ -402,6 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659639704}
   - component: {fileID: 659639703}
+  - component: {fileID: 659639705}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -440,6 +441,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659639705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659639702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d1fd5546e3ae247852269e0deeb2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &780526463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4971876115121522895, guid: e31a2dff47b7a454a8252deb4a201b07, type: 3}
@@ -506,6 +519,7 @@ GameObject:
   - component: {fileID: 1183888817}
   - component: {fileID: 1183888816}
   - component: {fileID: 1183888815}
+  - component: {fileID: 1183888818}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -618,13 +632,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183888813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.47, y: -0.15, z: 0}
+  m_LocalPosition: {x: -5.3, y: -0.5, z: 0}
   m_LocalScale: {x: 2.1233, y: 33.58141, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183888818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183888813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0513d333f4ba0d64e93b3b7bc208916f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoParaGerar: 3
+  modeloObstaculo: {fileID: 1905854145}
+  modeloObstaculo2: {fileID: 2057147664}
 --- !u!1 &1417824518
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +742,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 851818193efcea24898a07a940a21851, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9597aeaf0ad8c614fbbe0ebae12b574a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -731,14 +760,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417824518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.37, y: 1.26, z: 0}
-  m_LocalScale: {x: 1.964076, y: 1.964076, z: 1.964076}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.8012, y: 2.1874, z: 0}
+  m_LocalScale: {x: 0.44796562, y: 0.44796562, z: 0.44796562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
 --- !u!58 &1417824522
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -771,9 +800,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.025891291, y: 0.052135713}
   serializedVersion: 2
-  m_Radius: 0.17
+  m_Radius: 0.50210387
 --- !u!114 &1417824523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,7 +826,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1553951751}
   - component: {fileID: 1553951750}
-  - component: {fileID: 1553951753}
   - component: {fileID: 1553951752}
   m_Layer: 0
   m_Name: background-day
@@ -887,21 +915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontos: 0
   imagemGameOver: {fileID: 785846228}
---- !u!114 &1553951753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553951749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0513d333f4ba0d64e93b3b7bc208916f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tempoParaGerar: 3
-  modeloObstaculo: {fileID: 1905854145}
-  modeloObstaculo2: {fileID: 2057147664}
 --- !u!1 &1675458968
 GameObject:
   m_ObjectHideFlags: 0

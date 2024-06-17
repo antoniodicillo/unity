@@ -18,7 +18,7 @@ public class Obstaculo : MonoBehaviour
         this.transform.Translate(Vector3.up * Random.Range(-variacaoDaPosicaoY, variacaoDaPosicaoY));
     }
 
-    private void Start()
+    private void Start()    
     {
         this.posicaoPassaro = GameObject.FindObjectOfType<Passaro>().transform.position;
         this.controladorUI = GameObject.FindObjectOfType<UiController>();
@@ -26,12 +26,14 @@ public class Obstaculo : MonoBehaviour
 
     void Update()
     {
-        this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
-        if(!this.pontuei && this.transform.position.x < this.posicaoPassaro.x)
+        if (!this.pontuei && this.transform.position.x < posicaoPassaro.x)
         {
-            this.controladorUI.adicionarPontos();
+            Debug.Log("Pontuou");
             this.pontuei = true;
+            this.controladorUI.adicionarPontos();
         }
+        this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
+
     }
 
     private void OnCollisionEnter2D(Collision2D colisao)

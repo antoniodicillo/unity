@@ -38,15 +38,22 @@ public class GeradorDeObstaculos : MonoBehaviour
             //se eu quero usar a rotação
             if (rng == 1)
             {
-                GameObject.Instantiate(this.modeloObstaculo, this.transform.position + Vector3.right * 5f, Quaternion.identity);
+                GameObject obj = Instantiate(this.modeloObstaculo, this.transform.position + Vector3.right * 10f, Quaternion.identity);
+                DestruirObjeto(obj);
             }
             else
             {
-                GameObject.Instantiate(this.modeloObstaculo2, this.transform.position + Vector3.right * 5f, Quaternion.identity);
+                GameObject obj = Instantiate(this.modeloObstaculo2, this.transform.position + Vector3.right * 10f, Quaternion.identity);
+                DestruirObjeto(obj);
             };
-
+            
             //Quando o cronometro chega em zero, volta para o tempo inicial e reinicia a contagem  
             this.cronometro = this.tempoParaGerar;
         }
+    }
+
+    void DestruirObjeto(GameObject obj)
+    {
+        Destroy(obj, 10f);
     }
 }
