@@ -22,7 +22,7 @@ public class MenuEvents : MonoBehaviour
 
     private void OnPlayGameClick(ClickEvent evt)
     {
-        SceneManager.LoadScene("flappyScene");
+        SceneManager.LoadScene("Jogo");
     }
 
     private void OnPlayGameClick2(ClickEvent evt)
